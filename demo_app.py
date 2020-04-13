@@ -141,9 +141,10 @@ st.title('InterfaceGAN Interactive Demo')
 model_name = st.sidebar.selectbox(
             'Which GAN model?',
             ['pggan_celebahq','stylegan_celebahq','stylegan_ffhq'])
+gan_type = MODEL_POOL[model_name]['gan_type']
 
-if model_name == 'stylegan':
-    latent_space_type = model_name = st.sidebar.selectbox(
+if gan_type == 'stylegan':
+    latent_space_type = st.sidebar.selectbox(
             'Which type of latent space?',
         ['z', 'Z', 'w', 'W', 'wp', 'wP', 'Wp', 'WP'])
 else:
@@ -152,6 +153,9 @@ else:
 gan_type = MODEL_POOL[model_name]['gan_type']
 # Notify the reader that the data was successfully loaded.
 model,kwargs = load_model(model_name, latent_space_type, logger)
+
+print(kwargs)
+
 inittemp = init_latent(model,kwargs)
 latent_codes_state = fetch_session(model,kwargs)
 
