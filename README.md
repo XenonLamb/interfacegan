@@ -1,4 +1,4 @@
-# InterFaceGAN - Interpreting the Latent Space of GANs for Semantic Face Editing
+# InterFaceGAN with Interactive Demo
 
 ![Python 3.7](https://img.shields.io/badge/python-3.7-green.svg?style=plastic)
 ![pytorch 1.1.0](https://img.shields.io/badge/pytorch-1.1.0-green.svg?style=plastic)
@@ -17,6 +17,22 @@ In this repository, we propose an approach, termed as InterFaceGAN, for semantic
 [[Paper](https://arxiv.org/pdf/1907.10786.pdf)]
 [[Project Page](https://genforce.github.io/interfacegan/)]
 [[Demo](https://www.youtube.com/watch?v=uoftpl3Bj6w)]
+
+## Try out the Interactive Demo
+
+The demo is built with [[StreamLit](https://docs.streamlit.io/index.html)].
+
+Before your first run, install the StreamLit package via
+
+```
+pip install streamlit
+```
+
+Then start the demo
+
+```
+streamlit run demo_app.py
+```
 
 ## How to Use
 
